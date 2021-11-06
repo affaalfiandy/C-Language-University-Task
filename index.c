@@ -1,71 +1,85 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Obat {
+struct MakananPembuka {
+   char  Nama[50];
+   int   Harga;
+};
+
+struct MakananUtama {
+   char  Nama[50];
+   int   Harga;
+};
+
+struct MakananPenutup {
    char  Nama[50];
    int   Harga;
 };
 
 int main( ) {
+   struct MakananPembuka MakananPembuka1;
+   struct MakananPembuka MakananPembuka2;
+   struct MakananPembuka MakananPembuka3;
 
-   struct Obat Obat1;
-   struct Obat Obat2;
-   struct Obat Obat3;
-   struct Obat Obat4;
-   struct Obat Obat5;
-   struct Obat Obat6;
-   struct Obat Obat7;
-   struct Obat Obat8;
-   struct Obat Obat9;
-   struct Obat Obat10;
+   struct MakananUtama MakananUtama1;
+   struct MakananUtama MakananUtama2;
+   struct MakananUtama MakananUtama3;
 
-   /* Harga Obat 1*/
-   strcpy( Obat1.Nama, "Panadol");
-   Obat1.Harga = 11450;
+   struct MakananPenutup MakananPenutup1;
+   struct MakananPenutup MakananPenutup2;
+   struct MakananPenutup MakananPenutup3;
 
-   /* Harga Obat 2*/
-   strcpy( Obat2.Nama, "Diatabs");
-   Obat2.Harga = 3500;
+   /* Harga Makanan Pembuka*/
+   strcpy( MakananPembuka1.Nama, "Batagor");
+   MakananPembuka1.Harga = 30000;
 
-   strcpy( Obat3.Nama, "komixHerbal");
-   Obat3.Harga = 2000;
 
-   strcpy( Obat4.Nama, "Mylanta");
-   Obat4.Harga = 17000;
+   strcpy( MakananPembuka2.Nama, "Siomay");
+   MakananPembuka2.Harga = 40000;
 
-   strcpy( Obat5.Nama, "Promag");
-   Obat5.Harga = 8000;
+   strcpy( MakananPembuka3.Nama, "Pastel");
+   MakananPembuka3.Harga = 30000;
 
-   strcpy( Obat6.Nama, "Ibuprofen");
-   Obat6.Harga = 8000;
+   /* Harga makanan utama */
+   strcpy( MakananUtama1.Nama, "Nasi Goreng Seafood");
+   MakananUtama1.Harga = 60000;
 
-   strcpy( Obat7.Nama, "Mixagrip");
-   Obat7.Harga = 3000;
+   strcpy( MakananUtama2.Nama, "Sate Ayam");
+   MakananUtama2.Harga = 40000;
 
-   strcpy( Obat8.Nama, "Bodrex");
-   Obat8.Harga = 4000;
+   strcpy( MakananUtama3.Nama, "Sop Buntut");
+   MakananUtama3.Harga = 80000;
 
-   strcpy( Obat9.Nama, "Vitacimin");
-   Obat9.Harga = 20000;
+   /* Harga makanan penutup */
+   strcpy( MakananPenutup1.Nama, "Es Campur Durian");
+   MakananUtama1.Harga = 25000;
 
-   strcpy( Obat10.Nama, "Redoxon");
-   Obat10.Harga = 50000;
+   strcpy( MakananPenutup2.Nama, "Kue Cucur");
+   MakananUtama2.Harga = 15000;
+
+   strcpy( MakananPenutup3.Nama, "Nagasari");
+   MakananUtama3.Harga = 15000;
+
 
 
    printf("===============================\n");
-   printf("SELAMAT DATANG DI APOTEK SEHAT SENTOSA ABADI \n");
-   printf("SILAKAN PILIH OBAT ANDA \n");
+   printf("SELAMAT DATANG DI RESTORAN LEZAT MANTAP \n");
+   printf("SILAKAN PILIH MAKANAN ANDA \n");
    printf("===============================\n");
-   printf("1. %s\n", Obat1.Nama);
-   printf("2. %s\n",Obat2.Nama);
-   printf("3. %s\n", Obat3.Nama);
-   printf("4. %s\n",Obat4.Nama);
-   printf("5. %s\n", Obat5.Nama);
-   printf("6. %s\n",Obat6.Nama);
-   printf("7. %s\n", Obat7.Nama);
-   printf("8. %s\n",Obat8.Nama);
-   printf("9. %s\n", Obat9.Nama);
-   printf("10. %s\n",Obat10.Nama);
+   printf("Makanan Pembuka \n");
+   printf("1. %s\n", MakananPembuka1.Nama);
+   printf("2. %s\n",MakananPembuka2.Nama);
+   printf("3. %s\n", MakananPembuka3.Nama);
+   printf("\n");
+   printf("Makanan Utama \n");
+   printf("4. %s\n",MakananUtama1.Nama);
+   printf("5. %s\n", MakananUtama2.Nama);
+   printf("6. %s\n",MakananUtama3.Nama);
+   printf("\n");
+   printf("Makanan Penutup \n");
+   printf("7. %s\n", MakananPenutup1.Nama);
+   printf("8. %s\n",MakananPenutup2.Nama);
+   printf("9. %s\n", MakananPenutup3.Nama);
    printf("0. EXIT %s\n");
 
    int exit = 0;
@@ -85,52 +99,47 @@ int main( ) {
             case 1:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat1.Harga*Banyak)+Total;
+                Total = (MakananPembuka1.Harga*Banyak)+Total;
                 continue;
             case 2:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat2.Harga*Banyak)+Total;
+                Total = (MakananPembuka2.Harga*Banyak)+Total;
                 continue;
             case 3:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat3.Harga*Banyak)+Total;
+                Total = (MakananPembuka3.Harga*Banyak)+Total;
                 continue;
             case 4:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat4.Harga*Banyak)+Total;
+                Total = (MakananUtama1.Harga*Banyak)+Total;
                 continue;
             case 5:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat5.Harga*Banyak)+Total;
+                Total = (MakananUtama2.Harga*Banyak)+Total;
                 continue;
             case 6:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat6.Harga*Banyak)+Total;
+                Total = (MakananUtama3.Harga*Banyak)+Total;
                 continue;
             case 7:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat7.Harga*Banyak)+Total;
+                Total = (MakananPenutup1.Harga*Banyak)+Total;
                 continue;
             case 8:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat8.Harga*Banyak)+Total;
+                Total = (MakananPenutup2.Harga*Banyak)+Total;
                 continue;
             case 9:
                 printf("Masukkan jumlah barang \n");
                 scanf("%d",&Banyak);
-                Total = (Obat9.Harga*Banyak)+Total;
-                continue;
-            case 10:
-                printf("Masukkan jumlah barang \n");
-                scanf("%d",&Banyak);
-                Total = (Obat10.Harga*Banyak)+Total;
+                Total = (MakananPenutup3.Harga*Banyak)+Total;
                 continue;
         }
       continue;
